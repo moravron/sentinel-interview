@@ -19,4 +19,6 @@ def sort_by_parenthesis_level(s, level=0):
     if s.startswith(")"):
         sort_by_parenthesis_level(s[1:], level - 1)
     if not s:
-        print ("".join(levels_dict.values()))
+        reversed_values = levels_dict.values()
+        reversed_values.reverse()
+        print ("".join(reversed_values))
